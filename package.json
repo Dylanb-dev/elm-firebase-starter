@@ -5,14 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "firebase serve",
+    "preinstall": "npm run install-functions",
+    "install-functions": "cd functions && npm install",
+    "component": "elm-generate component",
+    "route": "elm-generate route",
     "start:prod": "NODE_ENV=production firebase serve",
+    "deploy": "npm run build && firebase deploy",
     "build": "mkdir -p functions/build && cd functions && npm run build",
     "test": "elm-test"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "elm-test": "^0.19.0-beta9",
+    "elm-on-spades": "git+https://github.com/rogeriochaves/spades.git",
+    "elm-test": "^0.19.1",
     "elm-webpack-loader": "^6.0.0",
     "webpack": "^4.17.0",
     "webpack-cli": "^3.1.0",
