@@ -20,7 +20,7 @@
             "elm/url": "1.0.0",
             "krisajenkins/remotedata": "6.0.1",
             "mdgriffith/elm-ui": "1.1.0",
-            "elm-explorations/test": "19.1.0"
+            "elm-explorations/test": "1.2.2"
         },
         "indirect": {
             "elm/virtual-dom": "1.0.0",
