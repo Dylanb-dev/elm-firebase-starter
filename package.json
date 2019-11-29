@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --colors --port 3000",
+    "start": "webpack-dev-server --hot --colors --port 3000 --config webpack.dev.config.js",
     "preinstall": "npm run install-functions",
     "install-functions": "cd functions && npm install",
     "component": "elm-generate component",
@@ -19,6 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "elm": "^0.19.1-2",
+    "elm-on-spades": "git+https://github.com/rogeriochaves/spades.git",
     "elm-test": "^0.19.1",
     "elm-webpack-loader": "^6.0.1",
     "html-webpack-plugin": "^3.2.0",
