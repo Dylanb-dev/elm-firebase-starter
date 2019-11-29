@@ -1,49 +1,45 @@
 ## Getting Started
 
-### Install Elm
-
-https://guide.elm-lang.org/install/elm.html
-
 ### Install Elm Language server extension for vscode
 
 https://github.com/elm-tooling/elm-language-server
 
-### Install spades for code gen ala angular
-
-```
-npm -g install git+https://github.com/rogeriochaves/spades.git
-```
-
 ### Setup Firebase
 
-After creating a firebase project rename firebaserc to .firebaserc and change project name to match the one you have on firebase.
+After creating a firebase change project name in .firebaserc to match the one you have on firebase.
 
 ## Usage
 
 ### Install Dependencies
 
-`npm i && cd functions && npm i && cd ..`
+`npm install`
 
-### Start Firebase emulator locally
+Note: May take a while on first install
+
+### Start Development Server
 
 `npm start`
 
-### Build app
+### Start Firebase emulator locally
 
-`npm run build`
+`npm serve`
 
-### Deploy to firebase (requires firebase cli)
+### Start Firebase emulator locally with production settings
 
-`firebase deploy`
+`npm serve:prod`
 
-### The rest of this readme is copied from elm spades, you can read more there.
+### Deploy to firebase
+
+`npm run deploy`
+
+### The rest of this readme is copied from elm spades, you can read more there about the patterns used.
 
 ## Generators
 
 ### Add new component
 
 ```
-elm-generate component Search
+npm run component Search
 ```
 
 This is the coolest generator, it will create a Search
@@ -52,7 +48,7 @@ component under `src/`, update the main Model, Msg, Update, View and Routes for 
 ### Add new route
 
 ```
-elm-generate route Contact
+npm run route Contact
 ```
 
 This will create a new Page type, route parser and route toPath case on the `src/Router/Routes.elm` file
