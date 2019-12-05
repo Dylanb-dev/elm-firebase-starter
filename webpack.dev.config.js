@@ -16,10 +16,9 @@ module.exports = {
       template: 'functions/index.ejs',
       templateParameters: {
         renderedHtml: '', // Disabled for dev mode, to test use `npm run serve`
-        bundlePath: '' // Disabled for dev mode, to test use `npm run serve`
+        bundlePath: 'http://localhost:3000/index_bundle.js' // Disabled for dev mode, to test use `npm run serve`
       },
-      // inject details of output file at end of body
-      inject: 'body'
+      inject: false
     })
   ],
   resolve: {
